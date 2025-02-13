@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spin of Memories</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Spin the Wheel, Tuba!</h2>
+        <div class="wheel-container">
+            <div class="wheel" id="wheel">
+                <div class="pointer"></div>
+                <button class="spin" onclick="spinWheel()">Spin it Tuba</button>
+            </div>
+        </div>
+        <p id="memory"></p>
+    </div>
+
+    <script>
+        let memories = {
+            "January": "January mai ham log peheli baar mile thee...",
+            "February": "February mai ham log bohot pass ayee thee...",
+            "March": "March ki bohot acche se baat Kiya...",
+            "April": "April mai sabse accha gift milaa...",
+            "May": "May mai ham aur bhi jyada close ayee...",
+            "June": "June mai hamari bohot ladaii Hui...",
+            "July": "July mai hamara first half year aniversary...",
+            "August": "August mai mene banning join kiyaa...",
+            "September": "September mai hamari bohot ladai Hui...",
+            "October": "None",
+            "November": "None",
+            "December": "None"
+        };
+
+        function spinWheel() {
+            let months = Object.keys(memories);
+            let randomMonth = months[Math.floor(Math.random() * months.length)];
+            let message = memories[randomMonth];
+
+            document.getElementById("memory").innerHTML = 
+                `<div class="letter">
+                    <button class="heart" onclick="openLetter('${message}')">Open</button>
+                </div>`;
+        }
+
+        function openLetter(text) {
+            alert(text);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+/* General Styles */
+body {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    background: #ffe6f2;
+    color: #ff4081;
+    overflow: hidden;
+}
+
+.container {
+    margin-top: 50px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* Glowing Text Effect */
+h2 {
+    font-size: 28px;
+    text-shadow: 0px 0px 10px #ff80b0;
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    from { text-shadow: 0px 0px 10px #ff80b0; }
+    to { text-shadow: 0px 0px 20px #ff4081; }
+}
+
+/* Animated Buttons */
+button {
+    padding: 12px 20px;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(255, 64, 129, 0.3);
+}
+
+button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 10px rgba(255, 64, 129, 0.5);
+}
+
+/* Yes & No Buttons */
+.yes {
+    background: #32cd32;
+    color: white;
+}
+
+.no {
+    background: #ff4d4d;
+    color: white;
+}
+
+/* Spin Button Animation */
+.spin {
+    background: #ff1493;
+    color: white;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Heart Animation */
+.heart-animation {
+    display: inline-block;
+    font-size: 50px;
+    color: red;
+    animation: heartbeat 1.5s infinite alternate;
+}
+
+@keyframes heartbeat {
+    from { transform: scale(1); }
+    to { transform: scale(1.2); }
+}
+
+/* Wheel Spin Animation */
+.wheel {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: conic-gradient(#ff80b0 0deg 30deg, #ff4081 30deg 60deg, #ff80b0 60deg 90deg, #ff4081 90deg 120deg, #ff80b0 120deg 150deg, #ff4081 150deg 180deg, #ff80b0 180deg 210deg, #ff4081 210deg 240deg, #ff80b0 240deg 270deg, #ff4081 270deg 300deg, #ff80b0 300deg 330deg, #ff4081 330deg 360deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px auto;
+    transition: transform 4s ease-out;
+}
+
+/* Pointer for Wheel */
+.pointer {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 30px;
+    background: red;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}

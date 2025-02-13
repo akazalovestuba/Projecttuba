@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secret Code</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Enter the Secret Code</h2>
+        <input type="password" id="secretCode" placeholder="Enter Code">
+        <button onclick="checkCode()">Submit</button>
+        <p id="errorMessage" class="error"></p>
+    </div>
+
+    <script>
+        function checkCode() {
+            let code = document.getElementById("secretCode").value;
+            if (code === "1023") {
+                window.location.href = "proposal.html"; // Redirect to proposal page
+            } else {
+                document.getElementById("errorMessage").innerText = "Who are you, tum hoo kon? Mujhe mera babuu chahiye 😭😭😭";
+            }
+        }
+    </script>
+</body>
+</html>
